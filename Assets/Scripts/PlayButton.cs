@@ -18,7 +18,7 @@ public class PlayButton : MonoBehaviour
     }
 
     void StartGame () {
-      Debug.Log("starting game");
+      Debug.Log("Starting Game");
       SceneManager.LoadScene("level1");
     }
 }
