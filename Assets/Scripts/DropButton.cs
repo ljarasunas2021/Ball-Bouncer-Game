@@ -8,15 +8,16 @@ public class DropButton : MonoBehaviour
 {
 
     public GameObject ball;
+    public GameObject spawn;
+
     private Vector3 pos;
     private Quaternion rot;
+    private bool dropped;
 
     // Start is called before the first frame update
     void Start()
     {
-        pos = new Vector3(650, 650, 0);
-        rot = Quaternion.identity;
-
+        dropped = false;
         Button drop = GetComponent<Button>();
         drop.onClick.AddListener(DropBall);
     }
@@ -29,7 +30,12 @@ public class DropButton : MonoBehaviour
     // Update is called once per frame
     void DropBall()
     {
-      Debug.Log("DropBall");
-      Instantiate(ball, pos, rot);
+      if (!dropped) {
+        Debug.Log("DropBall");
+        pos = spawn.transform.position;
+        rot = spawn.transform.rotation;
+        Instantiate(ball, pos, rot);
+        dropped = true;
+      }
     }
 }
