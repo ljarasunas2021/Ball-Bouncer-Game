@@ -55,6 +55,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\BallController.cs" />
      <Compile Include="Assets\Scripts\CannonController.cs" />
+     <Compile Include="Assets\Scripts\CustomGravity.cs" />
      <Compile Include="Assets\Scripts\DropButton.cs" />
      <Compile Include="Assets\Scripts\PersistentData.cs" />
      <Compile Include="Assets\Scripts\Platform.cs" />
