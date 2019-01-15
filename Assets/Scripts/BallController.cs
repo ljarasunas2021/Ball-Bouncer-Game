@@ -17,6 +17,7 @@ public class BallController : MonoBehaviour
       GetComponent<Rigidbody>().AddForce(-transform.up * 500);
       score = 0;
       scoreUI = GameObject.Find("UI Text - Score").GetComponent<Text>();
+      Physics.gravity = new Vector3(0, -10000F, 0);
     }
 
     // Update is called once per frame
